@@ -104,6 +104,20 @@ function space_oddity_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'space_oddity_scripts' );
 
+
+/**
+ * Load Google Fonts
+ */
+function load_fonts() {
+  wp_register_style('roboto-font', 'http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+  wp_enqueue_style( 'roboto-font');
+
+  wp_register_style('roboto-condensed-font', 'http://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+  wp_enqueue_style( 'roboto-condensed-font');
+}
+add_action('wp_print_styles', 'load_fonts');
+
+
 /**
  * Implement the Custom Header feature.
  */

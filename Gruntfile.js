@@ -26,7 +26,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'style.css': 'style.scss'
+          'style.css': 'sass/style.scss'
         }
       } 
     },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         },
       },
       css: {
-        files: ['css/dev/*.scss'],
+        files: ['sass/*/*.scss'],
         tasks: ['sass', 'autoprefixer'],
         options: {
           spawn: false,
